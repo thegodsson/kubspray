@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myfirstdeploy
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: monfront
+  template:
+    metadata:
+      labels:
+        app: monfront
+    spec:
+      containers:
+      - image: nginx:1.16			 # suivante 1.17
+        imagePullPolicy: Always
+        name: podfront
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+             path: /
+             port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          successThreshold: 1
+

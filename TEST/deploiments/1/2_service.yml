@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myfirstdeploy
+spec:
+  ports:
+  - name: 8080-80
+    nodePort: 31991
+    port: 8080
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: monfront
+  #type: ClusterIP
+  type: NodePort

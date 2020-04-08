@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myfirstdeploy
+  namespace: default
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: monfront
+  template:
+    metadata:
+      labels:
+        app: monfront
+    spec:
+      containers:
+      - image: nginx:1.17			 # suivante 1.17
+        imagePullPolicy: Always
+        name: podfront
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: monvolume
+      volumes:
+        - name: monvolume
+          hostPath:
+          nfs:
+            server: 192.168.6.124
+            path: "/srv/exports"
