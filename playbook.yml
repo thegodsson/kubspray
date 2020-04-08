@@ -1,0 +1,5 @@
+- name: install nginx
+  hosts: deploy
+  become: yes
+  roles:
+    - test1_david

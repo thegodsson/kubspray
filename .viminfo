@@ -54,18 +54,20 @@ $
 	²
 
 # File marks:
-'0  18  2  ~/kubespray/roles/test1_david/tasks/main.yml
-'1  21  34  ~/kubespray/roles/test1_david/tasks/main.yml
-'2  11  9  ~/kubespray/roles/test1_david/tasks/main.yml
-'3  1  44  ~/kubespray/roles/test1_david/tasks/main.yml
-'4  3  4  ~/kubespray/roles/test1_david/tasks/main.yml
-'5  1  0  ~/kubespray/playbook.yml
-'6  1  0  ~/kubespray/roles/test1_david/tasks/main.yml
-'7  12  0  ~/kubespray/roles/inventory.ini
-'8  1  0  ~/kubespray/roles/playbook.yml
-'9  1  0  ~/kubespray/roles/inventory.ini
+'0  1  0  ~/kubespray/inventory.ini
+'1  1  0  ~/kubespray/inventory/my-cluster/inventory.ini
+'2  18  2  ~/kubespray/roles/test1_david/tasks/main.yml
+'3  21  34  ~/kubespray/roles/test1_david/tasks/main.yml
+'4  11  9  ~/kubespray/roles/test1_david/tasks/main.yml
+'5  1  44  ~/kubespray/roles/test1_david/tasks/main.yml
+'6  3  4  ~/kubespray/roles/test1_david/tasks/main.yml
+'7  1  0  ~/kubespray/playbook.yml
+'8  1  0  ~/kubespray/roles/test1_david/tasks/main.yml
+'9  12  0  ~/kubespray/roles/inventory.ini
 
 # Jumplist (newest first):
+-'  1  0  ~/kubespray/inventory.ini
+-'  1  0  ~/kubespray/inventory/my-cluster/inventory.ini
 -'  18  2  ~/kubespray/roles/test1_david/tasks/main.yml
 -'  21  2  ~/kubespray/roles/test1_david/tasks/main.yml
 -'  11  4  ~/kubespray/roles/test1_david/tasks/main.yml
@@ -162,9 +164,14 @@ $
 -'  7  0  ~/kubespray/roles/test1_david/kubernetes.repo
 -'  1  0  ~/kubespray/roles/test1_david/kubernetes.repo
 -'  5  3  ~/kubespray/playbook.yml
--'  3  2  ~/kubespray/playbook.yml
 
 # History of marks within files (newest to oldest):
+
+> ~/kubespray/inventory.ini
+	"	1	0
+
+> ~/kubespray/inventory/my-cluster/inventory.ini
+	"	1	0
 
 > ~/kubespray/roles/test1_david/tasks/main.yml
 	"	18	2
@@ -300,9 +307,3 @@ $
 	^	7	14
 	.	7	13
 	+	7	13
-
-> ~/TEST/statefull/4_headless.yml
-	"	9	2
-
-> ~/TEST/K_s_cmd2/pod_emptyDir.yml
-	"	1	0

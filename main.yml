@@ -1,0 +1,21 @@
+- name: "[KUBERNETES] copy file 2_deploy.yml"
+  copy:
+    src: /home/vagrant/kubespray/roles/2_deploy.yml 
+    dest: /srv/data
+    owner: root
+    group: root
+    mode: 0664
+
+- name: "[KUBERNETES] copy file 2_deploy.yml"
+  copy:
+    src: /home/vagrant/kubespray/roles/2_service.yml
+    dest: /srv/data
+    owner: root
+    group: root
+    mode: 0664
+
+- name: "[KUBERNETES] deploy deploiement nginx"
+  shell: kubectl apply -f /srv/data/2_deploy.yml 
+
+- name: "[KUBERNETES] deploy service nginx"
+  shell: kubectl apply -f /srv/data/2_service.yml
